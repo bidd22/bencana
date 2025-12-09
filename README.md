@@ -1,19 +1,34 @@
-This directory includes a few sample datasets to get you started.
+# Kelompok 6 - Mitigasi Bencana (A)
+- Abid Arie F52124007
+- Moh. Ikhsan F52124013
+- Muh. Haikal F52124003
+- Chindy Amelia Febriana F52124001
+- Putri Ramadani Ma'ruf F52124018
 
-*   `california_housing_data*.csv` is California housing data from the 1990 US
-    Census; more information is available at:
-    https://docs.google.com/document/d/e/2PACX-1vRhYtsvc5eOR2FWNCwaBiKL6suIOrxJig8LcSBbmCbyYsayia_DvPOOBlXZ4CAlQ5nlDD8kTaIDRwrN/pub
+# Proyek: Analisis Sentimen Masyarakat Terhadap Kinerja Pemerintah Dalam Menangani Kasus Bencana Alam Hidrometereologi (Banjir Rob JABODETABEK) Dengan Mengklasifikasi Komentar Bencana Alam Berdasarkan Dataset Komentar Twitter Masyarakat
+Proyek ini adalah implementasi Machine Learning untuk melakukan klasifikasi otomatis pada komentar atau teks yang berhubungan dengan kejadian bencana alam. Tujuannya adalah memilah teks menjadi kategori yang dapat ditindaklanjuti untuk mendukung manajemen informasi dan respon bencana.
 
-*   `mnist_*.csv` is a small sample of the
-    [MNIST database](https://en.wikipedia.org/wiki/MNIST_database), which is
-    described at: http://yann.lecun.com/exdb/mnist/
+# Fitur Utama Program
+Program ini (`prediksi_komentar_.py`) mencakup langkah-langkah lengkap dari pembersihan data hingga prediksi model:
+1.  **Preprocessing Khusus Bahasa Indonesia:** Melakukan *case folding*, penghapusan tautan, *mention*, tanda baca, dan menerapkan **Normalisasi Slang** (misalnya, `ga` menjadi `tidak`) sebelum *stopword removal*.
+2.  **Visualisasi Data:** Menganalisis distribusi label, asal kota/kabupaten, dan karakteristik panjang teks.
+3.  **Vektorisasi Fitur:** Menggunakan **TF-IDF (Term Frequency-Inverse Document Frequency)** untuk mengubah teks menjadi representasi numerik.
+4.  **Model Klasifikasi:** Menggunakan algoritma **Support Vector Machine (SVM)** dengan *kernel linear* untuk pelatihan.
+5.  **Evaluasi Model:** Melakukan *split* data dan menampilkan *Classification Report* dan Akurasi.
 
-*   `anscombe.json` contains a copy of
-    [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet); it
-    was originally described in
+# Klasifikasi Label
+Teks diklasifikasikan ke dalam tiga (3) kategori utama, sesuai dengan definisi dalam program:
 
-    Anscombe, F. J. (1973). 'Graphs in Statistical Analysis'. American
-    Statistician. 27 (1): 17-21. JSTOR 2682899.
+| Label | Kategori | Deskripsi | Contoh Tujuan |
+| :---: | :---: | :--- | :--- |
+| **0** | Opini/Keluhan/Kritik | Komentar yang berisi pendapat, keluhan, atau kritik terhadap penanganan. | Perlu disaring untuk evaluasi publik. |
+| **1** | Informasi | Komentar yang memberikan informasi faktual tentang kondisi, kerusakan, atau lokasi kejadian. | Sangat penting untuk pemetaan kondisi lapangan. |
+| **2** | Aksi Pemerintah/Bantuan | Komentar yang berisi informasi tentang tindakan yang telah dilakukan (SAR, bantuan, evakuasi). | Digunakan untuk melacak kemajuan respon. |
 
-    and our copy was prepared by the
-    [vega_datasets library](https://github.com/altair-viz/vega_datasets/blob/4f67bdaad10f45e3549984e17e1b3088c731503d/vega_datasets/_data/anscombe.json).
+# Persyaratan (Dependencies)
+Untuk menjalankan program ini, Anda memerlukan lingkungan Python dan beberapa *library* berikut.
+
+Anda dapat menginstal semua *library* sekaligus menggunakan perintah:
+
+```bash
+pip install pandas scikit-learn nltk matplotlib seaborn
