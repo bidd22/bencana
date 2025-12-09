@@ -5,7 +5,7 @@
 - Chindy Amelia Febriana F52124001
 - Putri Ramadani Ma'ruf F52124018
 
-# Proyek: Analisis Sentimen Masyarakat Terhadap Kinerja Pemerintah Dalam Menangani Kasus Bencana Alam Hidrometereologi (Banjir Rob JABODETABEK) Dengan Mengklasifikasi Komentar Bencana Alam Berdasarkan Dataset Komentar Twitter Masyarakat
+# Proyek: Analisis Sentimen Masyarakat Terhadap Kinerja Pemerintah Dalam Menangani Kasus Bencana Alam Hidrometereologi (Banjir Rob JABODETABEK) Dengan Memprediksi Komentar Bencana Alam Berdasarkan Dataset Komentar Twitter Masyarakat Untuk Diklasifikasi Kedalam Label Oleh Model ML Yang Telah Dilatih
 Proyek ini adalah implementasi Machine Learning untuk melakukan klasifikasi otomatis pada komentar atau teks yang berhubungan dengan kejadian bencana alam. Tujuannya adalah memilah teks menjadi kategori yang dapat ditindaklanjuti untuk mendukung manajemen informasi dan respon bencana.
 
 # Fitur Utama Program
