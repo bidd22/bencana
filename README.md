@@ -14,7 +14,11 @@ Program ini (`prediksi_komentar_.py`) mencakup langkah-langkah lengkap dari pemb
 2.  **Visualisasi Data:** Menganalisis distribusi label, asal kota/kabupaten, dan karakteristik panjang teks.
 3.  **Vektorisasi Fitur:** Menggunakan **TF-IDF (Term Frequency-Inverse Document Frequency)** untuk mengubah teks menjadi representasi numerik.
 4.  **Model Klasifikasi:** Menggunakan algoritma **Support Vector Machine (SVM)** dengan *kernel linear* untuk pelatihan.
-5.  **Evaluasi Model:** Melakukan *split* data dan menampilkan *Classification Report* dan Akurasi.
+5.  **Evaluasi Model:** Melakukan *split* data dan menampilkan *Classification Report* dan Akurasi. Setelah training, kita pakai Scikit-learn Metrics buat ngukur seberapa pintar modelnya di Data Uji. Kita hitung Akurasi dan F1-Score sebagai bukti kalau model kita reliable.
+
+Fungsi Prediksi Akhir: Program punya fungsi khusus (classify_new_comment) yang bisa ngambil input dari file CSV lain atau input manual. Fungsi ini langsung memproses dan ngasih prediksi labelnya (0, 1, atau 2).
+
+Nilai Taktis: Prediksi inilah yang bikin sistem ini berguna. Kalau prediksi Informasi (1) tiba-tiba melonjak, itu sinyal darurat buat tim SAR harus ngecek lokasi. Kalau Kritik (0) yang melonjak, itu sinyal buat perbaikan statement atau pelayanan publik yang harus dilakukan segera
 
 # Klasifikasi Label
 Teks diklasifikasikan ke dalam tiga (3) kategori utama, sesuai dengan definisi dalam program:
