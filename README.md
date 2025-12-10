@@ -5,8 +5,9 @@
 - Chindy Amelia Febriana F52124001
 - Putri Ramadani Ma'ruf F52124018
 
-# Proyek: Analisis Sentimen Masyarakat Terhadap Kinerja Pemerintah Dalam Menangani Kasus Bencana Alam Hidrometereologi (Banjir Rob JABODETABEK) Dengan Memprediksi Komentar Bencana Alam Berdasarkan Dataset Komentar Twitter Masyarakat Untuk Diklasifikasi Kedalam Label Oleh Model ML Yang Telah Dilatih
-Proyek ini adalah implementasi Machine Learning untuk melakukan klasifikasi otomatis pada komentar atau teks yang berhubungan dengan kejadian bencana alam. Tujuannya adalah memilah teks menjadi kategori yang dapat ditindaklanjuti untuk mendukung manajemen informasi dan respon bencana.
+# PROYEK:
+    Analisis Sentimen Masyarakat Terhadap Kinerja Pemerintah Dalam Menangani Kasus Bencana Alam Hidrometereologi (Banjir Rob JABODETABEK) Dengan Memprediksi Komentar Bencana Alam Berdasarkan Dataset Komentar Twitter Masyarakat Untuk Diklasifikasi Kedalam Label Oleh Model ML - Algoritma SVM
+    Proyek ini adalah implementasi Machine Learning untuk melakukan klasifikasi otomatis pada komentar atau teks yang berhubungan dengan kejadian bencana alam. Tujuannya adalah memilah teks menjadi kategori yang dapat ditindaklanjuti untuk mendukung manajemen informasi dan respon bencana.
 
 # Fitur Utama Program
 Program ini (`prediksi_komentar_.py`) mencakup langkah-langkah lengkap dari pembersihan data hingga prediksi model:
@@ -18,7 +19,7 @@ Program ini (`prediksi_komentar_.py`) mencakup langkah-langkah lengkap dari pemb
 
 Fungsi Prediksi Akhir: Program punya fungsi khusus (classify_new_comment) yang bisa ngambil input dari file CSV lain atau input manual. Fungsi ini langsung memproses dan ngasih prediksi labelnya (0, 1, atau 2).
 
-Nilai Taktis: Prediksi inilah yang bikin sistem ini berguna. Kalau prediksi Informasi (1) tiba-tiba melonjak, itu sinyal darurat buat tim SAR harus ngecek lokasi. Kalau Kritik (0) yang melonjak, itu sinyal buat perbaikan statement atau pelayanan publik yang harus dilakukan segera
+Nilai Taktis: Prediksi inilah yang bikin sistem ini berguna. Kalau prediksi Informasi (1) tiba-tiba melonjak, itu sinyal darurat buat tim SAR harus ngecek lokasi. Kalau Kritik (0) yang melonjak, itu sinyal buat perbaikan statement atau pelayanan publik yang harus dilakukan segera demi kesejahteraan dan tingkat kepercayaan masyarakat terhadap instansi bisa baik
 
 # Klasifikasi Label
 Teks diklasifikasikan ke dalam tiga (3) kategori utama, sesuai dengan definisi dalam program:
@@ -32,7 +33,3 @@ Teks diklasifikasikan ke dalam tiga (3) kategori utama, sesuai dengan definisi d
 # Persyaratan (Dependencies)
 Untuk menjalankan program ini, Anda memerlukan lingkungan Python dan beberapa *library* berikut.
 
-Anda dapat menginstal semua *library* sekaligus menggunakan perintah:
-
-```bash
-pip install pandas scikit-learn nltk matplotlib seaborn

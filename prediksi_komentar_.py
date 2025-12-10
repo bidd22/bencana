@@ -176,7 +176,6 @@ def train_and_save_model(file_path):
     text_classifier.fit(X, y)
     return text_classifier
 
-
 # ==========================================
 # 4. FUNGSI KLASIFIKASI DAN PENGHITUNGAN LABEL
 # ==========================================
