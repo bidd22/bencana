@@ -216,7 +216,7 @@ def classify_new_comment(model, input_data, source_type):
 
         # 5. HITUNG DAN TAMPILKAN RINGKASAN STATISTIK
         print("\n==============================================")
-        print("📊 RINGKASAN HASIL KLASIFIKASI (TOTAL)")
+        print("RINGKASAN HASIL KLASIFIKASI (TOTAL)")
         print("==============================================")
         
         label_counts = df_uji['predicted_category'].value_counts().sort_index()
@@ -246,7 +246,7 @@ def classify_new_comment(model, input_data, source_type):
             
         # Tampilkan ringkasan statistik untuk input manual
         print("\n==============================================")
-        print("📊 RINGKASAN HASIL KLASIFIKASI (MANUAL)")
+        print("RINGKASAN HASIL KLASIFIKASI (MANUAL)")
         print("==============================================")
         
         df_manual = pd.DataFrame({'predicted_label_index': predictions})
@@ -305,15 +305,15 @@ if __name__ == "__main__":
         
         # 3. Cek keberadaan file uji dan lakukan klasifikasi
         if os.path.exists(uji_file):
-            print(f"\n✅ File Uji '{uji_file}' ditemukan. Memulai klasifikasi menggunakan CSV...")
+            print(f"\nFile Uji '{uji_file}' ditemukan. Memulai klasifikasi menggunakan CSV...")
             
             try:
                 df_uji = pd.read_csv(uji_file, delimiter=';')
                 classify_new_comment(classifier_model, df_uji, source_type='csv')
             except Exception as e:
                 print(f"Error saat memproses file CSV uji: {e}")
-                print("\n⚠ Gagal memproses CSV. Beralih ke mode input manual.")
+                print("\nGagal memproses CSV. Beralih ke mode input manual.")
                 manual_predict_mode(classifier_model)
         else:
-            print(f"\n❌ File Uji '{uji_file}' tidak ditemukan.")
+            print(f"\nFile Uji '{uji_file}' tidak ditemukan.")
             manual_predict_mode(classifier_model)
