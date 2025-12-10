@@ -11,15 +11,14 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 import seaborn as sns
-import os # Import pustaka os untuk cek file
+import os 
 
 # 1. Load Dataset dan Visualisasi Awal
-# Path file data training Anda
 data_file = 'dataset_komentarbencana.csv'
-df = None # Definisikan df di luar try/except
+df = None 
 
 try:
-    df = pd.read_csv(data_file, sep=';') # Menggunakan delimiter titik koma sesuai dataset Anda
+    df = pd.read_csv(data_file, sep=';') 
     print("Data training berhasil dimuat!")
     print(df.info())
 
@@ -76,7 +75,6 @@ except Exception as e:
 # 2. PREPROCESSING DAN UTILITIES
 # ==========================================
 
-# Download resource NLTK jika belum ada
 try:
     nltk.download('stopwords', quiet=True)
     nltk.download('punkt', quiet=True)
@@ -244,7 +242,6 @@ def classify_new_comment(model, input_data, source_type):
             print(f"[Prediksi]: {predicted_category}")
             print("-" * 30)
             
-        # Tampilkan ringkasan statistik untuk input manual
         print("\n==============================================")
         print("RINGKASAN HASIL KLASIFIKASI (MANUAL)")
         print("==============================================")
